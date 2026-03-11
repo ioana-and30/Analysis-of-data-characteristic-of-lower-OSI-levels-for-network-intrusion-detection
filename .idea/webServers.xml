@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="21e8a0a6-5639-4163-a32f-5aa6949668d4" name="monitor-dhcp">
+        <fileTransfer accessType="SFTP" host="172.30.6.62" port="22" sshConfigId="1ba0276f-ed6d-4f94-9fac-34ac6fb35adf" sshConfig="ubuntu@172.30.6.62:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" isUseSudo="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
