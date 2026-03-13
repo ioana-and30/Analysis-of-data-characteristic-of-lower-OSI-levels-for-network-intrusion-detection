@@ -1,0 +1,16 @@
+title: DHCP Starvation Attack
+id: 598f1f5d-7570-466d-9791-76495964f77c
+descrption: Detects DHCP starvation attacks, where an attacker floods the DHCP server with requests to exhaust its IP address pool.
+logsource:
+    category: network_connection
+    product: linux
+    service: dhcpd
+detection:
+    selection:
+        protocol: 'DHCP'
+        messageType_name: DISCOVER
+    condition: selection
+level: high
+status: test
+author: Bran Ioana
+date: 2026-03-11
