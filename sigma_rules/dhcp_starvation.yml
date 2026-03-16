@@ -1,6 +1,21 @@
-title: DHCP Starvation Attack
-id: 598f1f5d-7570-466d-9791-76495964f77c
-descrption: Detects DHCP starvation attacks, where an attacker floods the DHCP server with requests to exhaust its IP address pool.
+title: DHCP Starvation Attack detected
+status: experimental
+correlation:
+    type: event_count
+    rules:
+     - dhcp_discover_packets
+    group-by:
+      - mac_address
+    timespan: 1m
+    condition:
+      gte: 100
+
+---
+
+title: DHCP Discover Event
+name: dhcp_discover_packets
+status: experimental
+description: Detects DHCP Discover packets
 logsource:
     category: network_connection
     product: linux
@@ -10,7 +25,4 @@ detection:
         protocol: 'DHCP'
         messageType_name: DISCOVER
     condition: selection
-level: high
-status: test
-author: Bran Ioana
-date: 2026-03-11
+

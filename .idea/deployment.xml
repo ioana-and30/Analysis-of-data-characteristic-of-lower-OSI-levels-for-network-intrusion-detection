@@ -12,14 +12,14 @@
       <paths name="ubuntu@172.30.6.62:22 key">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/ubuntu/Licenta" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/pycharm_project_963" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="ubuntu@172.30.6.62:22 key (2)">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/ubuntu/Licenta" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/pycharm_project_356" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>

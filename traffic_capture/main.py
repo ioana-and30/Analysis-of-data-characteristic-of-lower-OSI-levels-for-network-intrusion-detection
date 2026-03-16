@@ -3,15 +3,18 @@ import os
 import sys
 from datetime import datetime
 
+from parso.normalizer import Rule
 from scapy.arch import L2Socket
 from scapy.sendrecv import sniff
 from scapy.layers.l2 import ARP
 from scapy.layers.dhcp import DHCP
 
+from sigma_rules.sigma_engine import SigmaEngine
 from sniff_arp import extractARP
 from sniff_dhcp import extractDHCP
 
 LOG_DIR="traffic_logs"
+RULE_DIR="sigma_rules"
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_dir)
@@ -51,6 +54,10 @@ def packet_handler(packet):
 
 if __name__ == "__main__":
     print("Starting monitoring ..")
+
+    engine = SigmaEngine(RULE_DIR)
+    engine.load_rules(RULE_DIR)
+    engine.print_rules()
     sniff(
         iface="ens4",
         filter="arp or (udp and (port 67 or port 68))",
