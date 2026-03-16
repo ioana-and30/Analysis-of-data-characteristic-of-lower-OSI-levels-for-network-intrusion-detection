@@ -1,7 +1,6 @@
 import os
 
 import yaml
-from sympy.matrices.expressions.kronecker import rules
 
 
 class SigmaEngine:
