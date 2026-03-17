@@ -1,0 +1,29 @@
+title: Multiple ARP Requests from a Single MAC Address
+status: experimental
+correlation:
+    type: value_count
+    rules:
+        - arp_scanner
+    group_by:
+        - src_mac
+    timespan: 1m
+    condition:
+        gte: 20
+        field: dst_ip
+
+---
+
+title: ARP Network Scanning
+name: arp_scanner
+description: Detects ARP requests
+status: experimental
+logsource:
+    category: network_connection
+    product: linux
+    service: network
+detection:
+    selection:
+        protocol: 'ARP'
+        operation: request
+    condition: selection
+

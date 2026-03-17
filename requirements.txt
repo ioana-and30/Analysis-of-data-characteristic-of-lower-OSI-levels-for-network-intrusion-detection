@@ -1,3 +1,2 @@
 pysigma
-pysigma-backend-python
 pyyaml
