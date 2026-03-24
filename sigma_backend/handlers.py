@@ -1,9 +1,6 @@
 import time
 
-from setuptools.package_index import unique_values
-
-
-class EventCountHandlers:
+class EventCountHandler:
     def __init__(self,threshold,timespan):
         self.threshold=threshold
         self.timespan=timespan

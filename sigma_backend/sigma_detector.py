@@ -1,6 +1,8 @@
 import os
 from sigma.collection import SigmaCollection
+
 from sigma_backend.sigma_engine import SigmaEngine
+
 
 class SigmaDetector:
     def __init__(self, rule_dir):

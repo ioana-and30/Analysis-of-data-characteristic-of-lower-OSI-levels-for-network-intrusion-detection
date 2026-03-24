@@ -1,6 +1,6 @@
 import json
 
-from sigma_backend.sigmaDetector import SigmaDetector
+from sigma_backend.sigma_detector import SigmaDetector
 from traffic_capture.logs import save_log
 
 RULE_DIR="sigma_rules"
