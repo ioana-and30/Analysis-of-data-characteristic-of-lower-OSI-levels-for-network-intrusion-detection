@@ -1,0 +1,14 @@
+title: Multiple ARP Requests from a Single MAC Address
+status: experimental
+correlation:
+    type: value_count
+    rules:
+        - arp_event
+    group_by:
+        - src_mac
+    timespan: 1m
+    condition:
+        gte: 20
+        field: dst_ip
+tags:
+  - attack.correlation

@@ -32,6 +32,10 @@ def packet_handler(packet):
     if data:
         data["timestamp"]=timestamp
         detector.analyze(data)
+
+        if "dhcp_discover_event" in detector.counters:
+            print(f"[*] Progres: {detector.counters['dhcp_discover_event']}/100 pachete DISCOVER detectate")
+
         save_log(data,filename)
 
         print(f"[{timestamp}] {data['protocol']} captured")
@@ -40,12 +44,16 @@ if __name__=="__main__":
 
     print("Starting ..")
 
-    sniff(
-        iface="ens7",
-        filter="arp or (udp and( port 67 or port 68))",
-        prn=packet_handler,
-        store=0,
-        promisc=True,
-        L2socket=L2Socket
+    # sniff(
+    #     iface="ens7",
+    #     filter="arp or (udp and( port 67 or port 68))",
+    #     prn=packet_handler,
+    #     store=0,
+    #     promisc=True,
+    #     L2socket=L2Socket
+    # )
+    sniff(offline="data_sets/atac_dhcp.pcap",
+          filter="udp and (port 67 or port 68)",
+          prn=packet_handler,
+          store=0
     )
-

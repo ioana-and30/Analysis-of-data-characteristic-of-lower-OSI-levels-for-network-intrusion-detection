@@ -33,11 +33,14 @@ def extractDHCP(packet):
         elif isinstance(opt, str):
             clean_options.append(opt)
 
+    msg_name = DHCP_OPTIONS.get(msg_type_id, "UNKNOWN")
+
     extracted_data = {
         "protocol": "DHCP",
-        "message_type_name": DHCP_OPTIONS.get(msg_type_id, "UNKNOWN"),
+        "messageType_name": msg_name,
         "transaction_id": hex(bootp_layer.xid),
-        "client_mac_chaddr": bootp_layer.chaddr.hex(':')[:17],
+        "src_mac": bootp_layer.chaddr.hex(':')[:17],
+        "mac_address": bootp_layer.chaddr.hex(':')[:17],
         "options": clean_options
     }
     return extracted_data

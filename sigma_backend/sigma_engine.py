@@ -45,9 +45,9 @@ class SigmaEngine:
             value=log.get(field)
             if str(value).lower() != str(expected_value).lower():
                 return False
-            return True
+        return True
 
-    def process_and_flag(self, log):
+    def process_rule(self, log):
         if not self._matches_selection(log):
             return False
 
@@ -56,30 +56,33 @@ class SigmaEngine:
             return True
 
         try:
-            group_field=self.correlation.group_by[0]
-            group_key=log.get(group_field)
+            group_field = self.correlation.group_by[0]
+            group_key = log.get(group_field)
 
             if not group_key:
                 return False
 
-            is_alert=False
+            is_alert = False
 
-            if self.correlation.type=='value_count':
-                value=self.correlation.condition.get('field') or self.correlation.generate[0]
-                observed_value=log.get(value)
+            if self.correlation.type == 'value_count':
+                value_field = self.correlation.condition.get('field') or (
+                    self.correlation.generate[0] if hasattr(self.correlation, 'generate') else None)
+                observed_value = log.get(value_field)
 
                 if observed_value:
-                    is_alert=self.handler.evaluate(group_key,observed_value)
-
+                    is_alert = self.handler.evaluate(group_key, observed_value)
                 else:
-                    is_alert=self.handler.evaluate(group_key)
+                    is_alert = self.handler.evaluate(group_key)
 
-                if is_alert:
-                    self._set_flags(log)
-                    return True
+            elif self.correlation.type == 'event_count':
+                is_alert = self.handler.evaluate(group_key)
+
+            if is_alert:
+                self._set_flags(log)
+                return True
 
         except Exception as e:
-            print(f"Error processing rule {self.title}: {e}")
+            print(f"Error processing correlation rule {self.title}: {e}")
 
         return False
 
