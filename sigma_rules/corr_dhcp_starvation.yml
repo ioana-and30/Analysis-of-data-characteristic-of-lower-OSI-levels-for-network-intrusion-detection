@@ -1,13 +1,13 @@
 title: DHCP Starvation Attack detected
 status: experimental
 correlation:
-    type: event_count
-    rules:
-     - dhcp_discover_event
-    group-by:
-      - mac_address
-    timespan: 1m
-    condition:
-      gte: 100
+  type: event_count
+  rules:
+    - dhcp_discover_event
+  group-by:
+    - client.mac
+  timespan: 1m
+  condition:
+    gte: 100
 tags:
-  - attack.correlation
+    - attack.correlation

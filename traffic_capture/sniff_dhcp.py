@@ -37,10 +37,10 @@ def extractDHCP(packet):
 
     extracted_data = {
         "protocol": "DHCP",
-        "messageType_name": msg_name,
-        "transaction_id": hex(bootp_layer.xid),
-        "src_mac": bootp_layer.chaddr.hex(':')[:17],
-        "mac_address": bootp_layer.chaddr.hex(':')[:17],
-        "options": clean_options
+        "event.type": msg_name,
+        "dhcp.transaction_id": hex(bootp_layer.xid),
+        "source.mac": bootp_layer.chaddr.hex(':')[:17],
+        "client.mac": bootp_layer.chaddr.hex(':')[:17],
+        "dhcp.options": clean_options
     }
     return extracted_data

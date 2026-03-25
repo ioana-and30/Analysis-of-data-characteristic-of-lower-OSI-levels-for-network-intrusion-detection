@@ -5,6 +5,7 @@ class EventCountHandler:
         self.threshold = threshold
         self.timespan = timespan
         self.events = {}
+        print(f"[DEBUG] Handler creat cu PRAG: {self.threshold} și TIMP: {self.timespan}s")
 
     def evaluate(self, group_key):
         if not group_key:

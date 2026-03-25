@@ -9,7 +9,7 @@ logsource:
 detection:
     selection:
         protocol: 'DHCP'
-        messageType_name: DISCOVER
+        event.type: DISCOVER
     condition: selection
 tags:
   - detection.only

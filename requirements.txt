@@ -1,3 +1,5 @@
 scapy
 pysigma
 pyyaml
+
+sigmatools

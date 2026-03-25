@@ -5,10 +5,10 @@ correlation:
     rules:
         - arp_event
     group_by:
-        - src_mac
+        - source.mac
     timespan: 1m
     condition:
         gte: 20
-        field: dst_ip
+        field: destination.ip
 tags:
   - attack.correlation

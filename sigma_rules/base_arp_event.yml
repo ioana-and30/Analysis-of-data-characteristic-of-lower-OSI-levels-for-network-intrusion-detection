@@ -10,7 +10,7 @@ logsource:
 detection:
     selection:
         protocol: 'ARP'
-        operation: request
+        arp.opcode: request
     condition: selection
 tags:
   - detection.only

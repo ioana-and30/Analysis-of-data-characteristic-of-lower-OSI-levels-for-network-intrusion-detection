@@ -15,10 +15,11 @@ def extractARP(packet):
     operation = "REQUEST" if arp_layer.op == 1 else "REPLY"
     extracted_data = {
         "protocol": "ARP",
-        "operation": "request" if arp_layer.op == 1 else "REPLY",
-        "src_mac": arp_layer.hwsrc,
-        "src_ip": arp_layer.psrc,
-        "dst_mac": arp_layer.hwdst,
-        "dst_ip": arp_layer.pdst
+        "network.protocol":"arp",
+        "arp.opcode": "request" if arp_layer.op == 1 else "REPLY",
+        "source.mac": arp_layer.hwsrc,
+        "source.ip": arp_layer.psrc,
+        "destination.mac": arp_layer.hwdst,
+        "destination.ip": arp_layer.pdst
     }
     return extracted_data
