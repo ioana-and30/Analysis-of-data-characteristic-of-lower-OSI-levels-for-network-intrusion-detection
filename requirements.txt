@@ -1,5 +1,5 @@
 scapy
-pysigma
+numpy
 pyyaml
-
+pysigma
 sigmatools

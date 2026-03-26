@@ -3,8 +3,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/.venv_licenta" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.13 (Analysis-of-data-characteristic-of-lower-OSI-levels-for-network-intrusion-detection)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12 (Analysis-of-data-characteristic-of-lower-OSI-levels-for-network-intrusion-detection)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -1,6 +1,3 @@
-import json
-from scapy.sendrecv import sniff
-from scapy.layers.l2 import Ether, ARP
 from scapy.layers.dhcp import DHCP, BOOTP
 
 DHCP_OPTIONS = {
@@ -15,7 +12,6 @@ DHCP_OPTIONS = {
 }
 
 def extractDHCP(packet):
-    extracted_data = {}
 
     bootp_layer = packet.getlayer(BOOTP)
     dhcp_layer = packet.getlayer(DHCP)

@@ -62,10 +62,27 @@ class SigmaRule:
 
         if match:
             group_by = getattr(self.correlation, 'group_by', None) or getattr(self.correlation, 'group-by', None)
+            if not group_by:
+                return False
+
             group_field = group_by[0]
             group_key = log.get(group_field)
 
-            is_alert = self.handler.evaluate(group_key)
+            if not group_key:
+                return False
+
+            is_alert = False
+            corr_type = getattr(self.correlation, 'type', None)
+
+            if corr_type == 'value_count':
+                condition = getattr(self.correlation, 'condition', {})
+                value_field = condition.get('field') if isinstance(condition, dict) else None
+
+                if value_field:
+                    collected_value = log.get(value_field)
+                    is_alert = self.handler.evaluate(group_key, collected_value)
+            else:
+                is_alert = self.handler.evaluate(group_key)
 
             if is_alert:
                 self._set_flags(log)
@@ -77,4 +94,3 @@ class SigmaRule:
 
         log['is_alert']=True
         log['sigma_rule_name']=self.title
-        log['alert_timestamp']=time.strftime('%H:%M:%S')

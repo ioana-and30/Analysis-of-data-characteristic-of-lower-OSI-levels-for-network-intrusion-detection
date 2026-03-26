@@ -1,7 +1,4 @@
-import json
-from scapy.sendrecv import sniff
-from scapy.layers.l2 import Ether, ARP
-
+from scapy.layers.l2 import ARP
 
 ARP_OPTIONS={
     1:"REQUEST",
@@ -9,10 +6,8 @@ ARP_OPTIONS={
 }
 
 def extractARP(packet):
-    extracted_data = {}
 
     arp_layer = packet.getlayer(ARP)
-    operation = "REQUEST" if arp_layer.op == 1 else "REPLY"
     extracted_data = {
         "protocol": "ARP",
         "network.protocol":"arp",

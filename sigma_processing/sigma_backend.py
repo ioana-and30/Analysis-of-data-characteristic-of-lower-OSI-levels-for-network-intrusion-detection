@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 
 import yaml
@@ -37,7 +38,7 @@ class SigmaBackend:
                 self.rules.append(SigmaRule(mock_rule))
 
     def analyze(self, log):
-        found_any_alert = False
+        alert = False
         matched_event_ids = []
 
         for engine in self.rules:
@@ -52,6 +53,7 @@ class SigmaBackend:
 
                     if event_id in sources:
                         if engine.process_rule(log, is_correlation_trigger=True):
-                            print(f"\n[!!!] ALERTĂ DETECTATĂ: {engine.title} [!!!]")
-                            found_any_alert = True
-        return found_any_alert
+
+                            print(f"\n!! ALERT !! \n {engine.title} ")
+                            alert = True
+        return alert
