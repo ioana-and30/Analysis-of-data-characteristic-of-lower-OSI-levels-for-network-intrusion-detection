@@ -1,0 +1,14 @@
+title: Rogue DHCP Server Activity
+name: rogue_dhcp_detection
+status: stable
+description: Detects DHCP OFFER OR ACK packets
+logsource:
+    category: network_traffic
+    protocol: dhcp
+detection:
+    selection:
+        event.type:
+            - 'offer'
+            - 'ack'
+    condition: selection
+level: high

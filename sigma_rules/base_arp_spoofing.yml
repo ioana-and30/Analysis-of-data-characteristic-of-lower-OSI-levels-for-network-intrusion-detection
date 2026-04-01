@@ -1,0 +1,14 @@
+title: ARP Spoofing Activity
+name: arp_spoofing_detection
+status: experimental
+description: Detects ARP REPLY that could pretend to be the server
+logsource:
+    category: network_connection
+    protocol: arp
+detection:
+    selection:
+        arp.opcode:
+            - 'reply'
+            - 'is-at'
+    condition: selection
+level: high

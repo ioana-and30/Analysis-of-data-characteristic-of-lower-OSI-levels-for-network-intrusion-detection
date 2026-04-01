@@ -49,15 +49,23 @@ class SigmaRule:
             return False
 
         for field, expected_value in self.selection.items():
-            value=log.get(field)
-            if str(value).lower() != str(expected_value).lower():
-                return False
+            value = log.get(field)
+
+            if isinstance(expected_value, list):
+                expected_list_lower = [str(v).lower() for v in expected_value]
+                if str(value).lower() not in expected_list_lower:
+                    return False
+            else:
+                if str(value).lower() != str(expected_value).lower():
+                    return False
         return True
 
     def process_rule(self, log, is_correlation_trigger=False):
         match = True if (is_correlation_trigger and self.correlation) else self._matches_selection(log)
 
         if not self.handler:
+            if match:
+                self._set_flags(log)
             return match
 
         if match:

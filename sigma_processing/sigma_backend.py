@@ -7,10 +7,11 @@ from sigma.collection import SigmaCollection
 from sigma_processing.sigma_rule import SigmaRule
 
 class SigmaBackend:
-    def __init__(self, rule_dir):
+    def __init__(self, rule_dir,trusted_dhcp_mac=None):
         self.rule_dir=rule_dir
         self.rules=[]
         self._load_rules()
+        self.trusted_dhcp_mac = trusted_dhcp_mac.lower() if trusted_dhcp_mac else None
 
     def _load_rules(self):
         for file in sorted(os.listdir(self.rule_dir)):
@@ -37,7 +38,20 @@ class SigmaBackend:
                 })
                 self.rules.append(SigmaRule(mock_rule))
 
+        self.base_rules = set()
+        for engine in self.rules:
+            if engine.correlation:
+                source_ids = getattr(engine.correlation, 'rules', [])
+                for s_id in source_ids:
+                    self.base_rules.add(s_id)
+
     def analyze(self, log):
+
+        if self.trusted_dhcp_mac and log.get("protocol") == "DHCP":
+            src_mac = log.get("source.mac", "").lower()
+            if src_mac == self.trusted_dhcp_mac:
+                return False
+
         alert = False
         matched_event_ids = []
 
@@ -46,14 +60,16 @@ class SigmaBackend:
                 if engine.process_rule(log):
                     matched_event_ids.append(engine.id)
 
+                    if engine.id not in self.base_rules:
+                        print(f"\n!! ALERT !! \n {engine.title} ")
+                        alert = True
+
         for event_id in matched_event_ids:
             for engine in self.rules:
                 if engine.correlation:
                     sources = getattr(engine.correlation, 'rules', [])
-
                     if event_id in sources:
                         if engine.process_rule(log, is_correlation_trigger=True):
-
                             print(f"\n!! ALERT !! \n {engine.title} ")
                             alert = True
         return alert

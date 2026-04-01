@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 
 from scapy.layers.dhcp import DHCP
@@ -8,8 +9,12 @@ from sigma_processing.sigma_backend import SigmaBackend
 from traffic_capture.logs import save_log
 from traffic_capture.sniff_arp import extractARP
 from traffic_capture.sniff_dhcp import extractDHCP
+import ui.terminal_ui as ui
 
-detector=SigmaBackend("sigma_rules")
+sys_info = ui.get_sys_info()
+trusted_mac = sys_info.get('trusted_dhcp')
+
+detector=SigmaBackend("sigma_rules", trusted_mac)
 packet_id=1
 def packet_handler(packet):
 
@@ -40,27 +45,65 @@ def packet_handler(packet):
 
         save_log(data, filename)
 
-if __name__=="__main__":
 
-    print("Starting ..")
+def live_capture(interface, ):
+    ui.show_message(f"[*] Starting lice capture on {interface}...", style="bold green")
+    try:
+        sniff(
+            iface=interface,
+            filter="arp or (udp and (port 67 or port 68))",
+            prn=packet_handler,
+            store=0,
+            promisc=True
+            # L2socket=L2Socket
+        )
+    except Exception as e:
+        ui.show_message(f"[!] Error: {e}", style="bold red")
 
-    # sniff(
-    #     iface="ens7",
-    #     filter="arp or (udp and( port 67 or port 68))",
-    #     prn=packet_handler,
-    #     store=0,
-    #     promisc=True,
-    #     L2socket=L2Socket
-    # )
-    sniff(offline="data_sets/atac_dhcp.pcap",
-          filter="udp and (port 67 or port 68)",
-          prn=packet_handler,
-          store=0
-    )
 
-    #
-    # sniff(offline="data_sets/atac_arp.pcap",
-    #       filter="arp",
-    #       prn=packet_handler,
-    #       store=0
-    #       )
+def offline_analysis(pcap_path):
+    if os.path.exists(pcap_path):
+        ui.show_message(f"[*] Analyzing file: {pcap_path}...", style="bold green")
+        try:
+            sniff(
+                offline=pcap_path,
+                filter="arp or (udp and (port 67 or port 68))",
+                prn=packet_handler,
+                store=0
+            )
+        except Exception as e:
+            ui.show_message(f"[!] Error processing pcap: {e}", style="bold red")
+    else:
+        ui.show_message(f"[!] File '{pcap_path}' not found", style="bold red")
+
+
+def main():
+    global packet_id
+
+    while True:
+        packet_id = 1
+
+        info = ui.display_header()
+
+        choice = ui.get_user_choice()
+
+        if choice == 1:
+            live_capture(info['iface'])
+            ui.wait_for_input("\n[dim]Live capture finished. Press enter to go back to the menu...[/]")
+
+        elif choice == 2:
+            pcap_path = ui.ask_for_pcap_path()
+            offline_analysis(pcap_path)
+            ui.wait_for_input("\n[dim]Offline analysis complete. Press enter to go back to the menu...[/]")
+
+        elif choice == 0:
+            ui.show_message("Shutting down..", style="bold")
+            break
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        ui.show_message("\n[!] Keyboard interrupt", style="bold red")
+        exit(0)

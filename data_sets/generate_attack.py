@@ -1,42 +1,54 @@
+import random
 from scapy.layers.l2 import Ether, ARP
 from scapy.layers.inet import IP, UDP
 from scapy.layers.dhcp import BOOTP, DHCP
 from scapy.utils import wrpcap
-import random
+import time
 
-def generate_dhcp_discover(filename="atac_dhcp.pcap", count=105):
+
+def generate_attack(filename="data_sets/licenta.pcap"):
     packets = []
-    for i in range(count):
-        rand_mac = "00:11:22:33:44:%02x" % (i % 255)
-        ether = Ether(src=rand_mac, dst="ff:ff:ff:ff:ff:ff")
-        ip = IP(src="0.0.0.0", dst="255.255.255.255")
-        udp = UDP(sport=68, dport=67)
-        bootp = BOOTP(chaddr=rand_mac.replace(':', '').lower()[:12].encode(), xid=random.randint(1, 10 ** 8))
-        dhcp = DHCP(options=[("message-type", "discover"), "end"])
-        packets.append(ether / ip / udp / bootp / dhcp)
+
+    GATEWAY_MAC = "aa:bb:cc:00:00:01"
+    GATEWAY_IP = "192.168.10.1"
+    ATTACKER_MAC = "de:ad:be:ef:00:01"
+    VICTIM_MAC = "00:11:22:33:44:01"
+    VICTIM_IP = "192.168.10.101"
+
+    packets.append(
+        Ether(src=VICTIM_MAC, dst="ff:ff:ff:ff:ff:ff") / ARP(op=1, hwsrc=VICTIM_MAC, psrc=VICTIM_IP, pdst=GATEWAY_IP))
+    packets.append(
+        Ether(src=GATEWAY_MAC, dst=VICTIM_MAC) / IP(src=GATEWAY_IP, dst=VICTIM_IP) / UDP(sport=67, dport=68) / BOOTP(
+            op=2, chaddr=bytes.fromhex(VICTIM_MAC.replace(':', ''))) / DHCP(options=[("message-type", "offer"), "end"]))
+
+    rogue_mac = "de:ad:be:ef:00:02"
+    packets.append(Ether(src=rogue_mac, dst=VICTIM_MAC) / IP(src="192.168.10.250", dst=VICTIM_IP) / UDP(sport=67,
+                                                                                                        dport=68) / BOOTP(
+        op=2, chaddr=bytes.fromhex(VICTIM_MAC.replace(':', ''))) / DHCP(options=[("message-type", "offer"), "end"]))
+
+    packets.append(
+        Ether(src=ATTACKER_MAC, dst=VICTIM_MAC) / ARP(op=2, hwsrc=ATTACKER_MAC, psrc=GATEWAY_IP, hwdst=VICTIM_MAC,
+                                                      pdst=VICTIM_IP))
+
+    for i in range(25):
+        target_ip = f"192.168.10.{i + 2}"
+        packets.append(
+            Ether(src=ATTACKER_MAC, dst="ff:ff:ff:ff:ff:ff") / ARP(op=1, hwsrc=ATTACKER_MAC, psrc="192.168.10.200",
+                                                                   pdst=target_ip))
+
+    starve_mac = "00:aa:bb:cc:dd:ee"
+    for i in range(110):
+        packets.append(
+            Ether(src=starve_mac, dst="ff:ff:ff:ff:ff:ff") / IP(src="0.0.0.0", dst="255.255.255.255") / UDP(sport=68,
+                                                                                                            dport=67) / BOOTP(
+                chaddr=bytes.fromhex(starve_mac.replace(':', ''))) / DHCP(
+                options=[("message-type", "discover"), "end"]))
+
+    curr_time = time.time()
+    for i, p in enumerate(packets):
+        p.time = curr_time + (i * 0.01)
 
     wrpcap(filename, packets)
 
-
-def generate_arp_requests(filename="atac_arp.pcap", count=30):
-    packets = []
-    source_mac = "00:0c:29:4f:8b:35"
-    source_ip = "192.168.1.50"
-
-    for i in range(count):
-        target_ip = f"192.168.1.{i + 1}"
-
-        ether = Ether(src=source_mac, dst="ff:ff:ff:ff:ff:ff")
-        arp = ARP(
-            op=1,
-            hwsrc=source_mac,
-            psrc=source_ip,
-            hwdst="00:00:00:00:00:00",
-            pdst=target_ip
-        )
-
-        packets.append(ether / arp)
-    wrpcap(filename, packets)
 if __name__ == "__main__":
-    generate_dhcp_discover()
-    generate_arp_requests()
+    generate_attack()

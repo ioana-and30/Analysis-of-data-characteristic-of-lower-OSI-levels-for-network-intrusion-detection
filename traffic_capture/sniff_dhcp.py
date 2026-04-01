@@ -1,4 +1,5 @@
 from scapy.layers.dhcp import DHCP, BOOTP
+from scapy.layers.l2 import Ether
 
 DHCP_OPTIONS = {
     1: "DISCOVER",
@@ -35,7 +36,7 @@ def extractDHCP(packet):
         "protocol": "DHCP",
         "event.type": msg_name,
         "dhcp.transaction_id": hex(bootp_layer.xid),
-        "source.mac": bootp_layer.chaddr.hex(':')[:17],
+        "source.mac": packet[Ether].src if packet.haslayer(Ether) else "unknown",
         "client.mac": bootp_layer.chaddr.hex(':')[:17],
         "dhcp.options": clean_options
     }

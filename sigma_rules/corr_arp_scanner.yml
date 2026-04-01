@@ -1,4 +1,4 @@
-title: Multiple ARP Requests from a Single MAC Address
+title: ARP Scanner
 status: experimental
 correlation:
     type: value_count
