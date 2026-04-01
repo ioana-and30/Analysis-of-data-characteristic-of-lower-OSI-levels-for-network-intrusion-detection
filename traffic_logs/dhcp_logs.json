@@ -1375,5 +1375,1382 @@
         "timestamp": "26-03-2026 15:30:18",
         "is_alert": true,
         "sigma_rule_name": "DHCP Starvation Attack detected"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x41c509a",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP1",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x3bba2f9",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP2",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x345ffc9",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP3",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x4f5c9e3",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP4",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x6eb2e8",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP5",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x497f2da",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP6",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x3131000",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP7",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x4b1f984",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP8",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x11ea876",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP9",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1f321bd",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP10",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x22cb917",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP11",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5f5bfef",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP12",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x25cd337",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP13",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5dd7f09",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP14",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x456c3c9",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP15",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x303f46d",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP16",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x21bf55b",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP17",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1becf51",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP18",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x305aeba",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP19",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x53afa76",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP20",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x35cc970",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP21",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x3bf7b79",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP22",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0xe666b7",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP23",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1d068b6",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP24",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x3b0c8cd",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP25",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x32f122d",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP26",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5ae9799",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP27",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1ddb8b1",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP28",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5b25b97",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP29",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x49428dd",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP30",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2b0b2e6",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP31",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x400b195",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP32",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x4b4e706",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP33",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0xb97324",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP34",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x4f948cb",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP35",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5016e8f",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP36",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x55ef0bb",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP37",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5a003c6",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP38",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x36198fb",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP39",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x439740b",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP40",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x3c1f22e",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP41",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x3dc3a04",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP42",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5ae0c6c",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP43",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x3082a67",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP44",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1834a17",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP45",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x507db66",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP46",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x59d799e",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP47",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2c187c2",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP48",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2d3aaf8",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP49",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0xd50f5d",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP50",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x436f5c8",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP51",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5b947b9",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP52",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1882c3",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP53",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x14ccb43",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP54",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1938416",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP55",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0xf55a39",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP56",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1d69a3",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP57",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2c458dd",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP58",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2847e31",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP59",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x104db79",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP60",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x523aa03",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP61",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x58c5f1d",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP62",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x52ed14c",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP63",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x293d9e0",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP64",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1a2b072",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP65",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2d418f2",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP66",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5820d01",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP67",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x33cfea8",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP68",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2b27961",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP69",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2762db3",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP70",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x3218b75",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP71",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2b00cb",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP72",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5e8a4d5",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP73",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x16aeec1",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP74",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0xef2910",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP75",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x962c61",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP76",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5eb3d0",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP77",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x30a080a",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP78",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1eb156e",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP79",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x40ee7e9",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP80",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x17d5ef7",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP81",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x767706",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP82",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x220ef93",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP83",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x31dfcc",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP84",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x12cbe0d",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP85",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0xc7879c",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP86",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2637481",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP87",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x176cf49",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP88",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0xbaf15d",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP89",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1ac15db",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP90",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5cf0b01",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP91",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2b2ecaa",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP92",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x19d655",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP93",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x29a858e",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP94",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x5ec48ea",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP95",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x54cf36c",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP96",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x305ebdd",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP97",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x1fd58b9",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP98",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0xa0a9a1",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP99",
+        "timestamp": "01-04-2026 18:11:48"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x400acde",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP100",
+        "timestamp": "01-04-2026 18:11:48",
+        "is_alert": true,
+        "sigma_rule_name": "DHCP Starvation Attack detected"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x30cc7c1",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP101",
+        "timestamp": "01-04-2026 18:11:48",
+        "is_alert": true,
+        "sigma_rule_name": "DHCP Starvation Attack detected"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x74a67c",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP102",
+        "timestamp": "01-04-2026 18:11:48",
+        "is_alert": true,
+        "sigma_rule_name": "DHCP Starvation Attack detected"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x2698213",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP103",
+        "timestamp": "01-04-2026 18:11:48",
+        "is_alert": true,
+        "sigma_rule_name": "DHCP Starvation Attack detected"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0x30ab49c",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP104",
+        "timestamp": "01-04-2026 18:11:48",
+        "is_alert": true,
+        "sigma_rule_name": "DHCP Starvation Attack detected"
+    },
+    {
+        "protocol": "DHCP",
+        "event.type": "DISCOVER",
+        "dhcp.transaction_id": "0xa36c59",
+        "source.mac": "30:30:31:31:32:32",
+        "client.mac": "30:30:31:31:32:32",
+        "dhcp.options": [
+            "message-type: 1",
+            "end"
+        ],
+        "id": "DHCP105",
+        "timestamp": "01-04-2026 18:11:48",
+        "is_alert": true,
+        "sigma_rule_name": "DHCP Starvation Attack detected"
     }
 ]
